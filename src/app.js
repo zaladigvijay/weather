@@ -6,6 +6,7 @@ const weather=require('./utils/weather')
     
 
 const app = express();
+const port = process.env.PORT || 3000
 //configureation handlerbar and view engine
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '../templates/views'))
@@ -49,7 +50,7 @@ app.get('*', (req,res) => {
 })
 
 //start app at 3000 port number
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server is up on port 3000')
 })
 

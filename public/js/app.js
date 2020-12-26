@@ -3,7 +3,7 @@
     search.addEventListener('click', (event) => {
         const add = document.getElementById('address').value;
         const result = document.getElementById('result')
-        fetch('http://127.0.0.1:3000/weather?address='+add).then((response) => {
+        fetch('/weather?address='+add).then((response) => {
     response.json().then((data) => {
         result.innerHTML = '';
         if (data.error) {
